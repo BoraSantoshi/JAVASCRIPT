@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM LEARNING by own</title>
+</head>
+<body>
+    <div>
+        <h1 id="title" class="headline">DOM LEARNING</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <h2 class="subhead">hello ji</h2>
+        <h1>santoshi this side</h1>
+        <input type="password" id="" name="">
+    </div>
+    <div class="week">
+        <div class="day">monday</div>
+        <div class="day">tuesday</div>
+        <div class="day">thursday</div>
+        <div class="day">wednesday</div>
+        <div class="day">friday</div>
+        <div class="day">saturday</div>
+    </div>
+</body>
+<script>
+    const temp=document.querySelector('.week') //op-
+     console.log(temp)  //o/p= HTMLCollection(6)
+     console.log(document.querySelector('.day'))  //op : first element div class day that is monday class div
+     console.log(temp.children)
+     console.log(temp.children[5])   //div of 5th child
+     console.log(temp.children[5].innerHTML)   //o/p= saturday text of 5th child
+     for(let i=0;i<temp.children.length;i++){
+        console.log(temp.children[i].innerHTML)
+     }
+    console.log(document.querySelector('.day').style.backgroundColor='orange')
+    console.log(temp.children[2].style.backgroundColor='red')
+    console.log(temp.children[5].style.color='orange')
+    console.log(temp.children[3].style.backgroundColor='yellow')
+    console.log(temp.firstElementChild)
+    console.log(temp.lastElementChild)
+    console.log("nodes:",temp.childNodes)
+    
+</script>
+</html>
