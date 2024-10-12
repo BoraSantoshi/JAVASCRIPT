@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="languages">
+        <li>JAVASCRIPT</li>
+        //ADD some more NEW list in unordered list
+    </ul>
+</body>
+<script>
+    //method 1
+    let li=document.createElement('li');
+    let text= document.createTextNode("html")
+    li.appendChild(text)
+    document.querySelector('.languages').appendChild(li)
+
+    
+    //method 2 using function
+    function addlistele(langname){
+        let add=document.createElement('li');
+        add.innerHTML= `${langname}`
+        document.querySelector('.languages').appendChild(add)
+    }
+    addlistele("CSS")
+    addlistele("TYPESCRIPT")
+
+
+    //method 3 same as 1 but used function here 
+    function addlang(langname){
+        let add=document.createElement('li');
+        add.appendChild(document.createTextNode(langname))
+        document.querySelector('.languages').appendChild(add)
+    }
+    addlang("GOLANG")
+
+    //edit list method 1
+    const secondlang= document.querySelector("li:nth-child(2)")
+    secondlang.innerHTML="java"
+
+    //edit list method 2 but is is not working
+    // const secondlang= document.querySelector("li:nth-child(2)")
+    // console.log(secondlang)
+    // const textedit= document.createElement('li')
+    // textedit.textContent="mongo"
+    // console.log(textaddinli)
+    // secondlang.replaceWith(textedit)
+
+    //edit list method 3
+    const firstlang= document.querySelector("li:first-child")
+    firstlang.outerHTML='<li>mongodb</li>'
+
+    //remove
+    const lastlang= document.querySelector("li:last-child")
+    lastlang.remove()
+    
+</script>
+</html>
