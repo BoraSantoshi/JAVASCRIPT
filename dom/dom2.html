@@ -8,13 +8,7 @@
 <body  style="background-color: black; color: aliceblue;">  
 </body>
 <script>
-    //create object
-    const h=document.createElement('h1')
-    console.log(h)
-    h.style.color="white"
-    h.style.background="yellow"
-    div.style.height="45px"
-
+    //create object of div
     const div=document.createElement('div')
     console.log(div)
     div.className="main"
@@ -24,9 +18,37 @@
     div.style.backgroundColor="green"
     div.style.padding="15px"
     div.style.height="45px"
-    
     //below is a method to show your creating object in a browser
     document.body.appendChild(div)
+
+    //create object of h1
+    const h=document.createElement('h1')
+    console.log(h)
+    h.style.color="white"
+    h.style.background="yellow"
+    h.style.height="45px"
+    h.style.padding="15px"
+    const addtext= document.createTextNode("main headline") //other metod of adding innertext
+    h.appendChild(addtext)
+    //below is a method to show your creating object in a browser
     document.body.appendChild(h)
+    function style(ele){
+
+    }
+    for(let i=0;i<3;i++){
+        let ele=document.createElement('div')
+        console.log(h)
+        ele.style.color="white"
+        ele.style.background="brown"
+        ele.style.height="45px"
+        ele.style.padding="15px"
+        const addtext= document.createTextNode("sub headlines") //other metod of adding innertext
+        ele.appendChild(addtext)
+        ele.style.marginTop="15px"   //create gap bw divs
+    //below is a method to show your creating object in a browser
+        document.body.appendChild(ele)
+    }
+
+
 </script>
 </html>
